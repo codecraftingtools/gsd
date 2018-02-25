@@ -1,0 +1,52 @@
+<Main>:
+    orientation: "horizontal"
+    Button:
+        id: button1
+        text: "New Port"
+        width: 100
+        size_hint_x: None
+    RelativeLayout:
+        id: drawing1
+        canvas:
+            Color:
+                rgba: .8,.8,.8,1
+            Rectangle:
+                size: self.size
+
+<RectLabel>:
+    size_hint: None, None
+    size: self.texture_size
+    padding: 5, 5
+    halign: 'center'
+    valign: 'middle'
+    color: 0,0,0,1
+    canvas.before:
+        Color:
+            rgba: self.bg_color
+        Rectangle:
+            size: root.size
+            pos: root.pos
+
+<SymbolView>:
+    size_hint: None, None
+    size: box.size
+    canvas.before:
+        Color:
+            rgba: 0,0,1,1
+        #Rectangle:
+        #    size: root.size
+        Line:
+            rounded_rectangle: root.x+2, root.y+2, root.width-4, root.height-4, 5
+            width: 2
+    GridLayout:
+        id: box
+        cols: 1
+        size: self.minimum_size
+        size_hint: None, None
+        RectLabel:
+            id: c1
+            text: root.symbol.component.title
+            bg_color: 1,0,0,0.5
+            #width: root.width
+            pos_hint: {'x_center': .5, 'center_y': .5}
+            #x: root.x + 30
