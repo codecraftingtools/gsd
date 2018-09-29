@@ -37,10 +37,10 @@ class SymbolView(RelativeLayout):
         self.update_ports()
 
     def update_ports(self, *args, **kw):
-        print 'update_ports'
+        print('update_ports')
         for p in self.symbol.component.ports:
             if not p.title in self.port_views:
-                print 'adding port:', p.title
+                print('adding port:', p.title)
                 pv = RectLabel(text=p.title)
                 #pv.width = self.ids.box.width
                 pv.bg_color = 0,1,0,0.5
@@ -62,7 +62,7 @@ s = Symbol(component=c)
 class GcdApp(App):
 
     def callback(self, button):
-        print "pressed"
+        print("pressed")
         c.title = c.title + "k"
         c.ports.append(Port(title="a{}".format(len(c.ports))))
 
