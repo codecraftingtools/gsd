@@ -1,9 +1,10 @@
 Graphical System Designer (gsd)
 ===============================
 
-The *gsd* program is a graphical system design tool that will enable
-the construction of hierarchic software components.  This project is
-in its infancy, so it doesn't do much yet.
+The *gsd* program is a graphical system design tool (block diagram
+schematic editor) that will enable the construction of hierarchic
+software components.  This project is in its infancy, so it doesn't do
+much yet.
 
 This tool requires *kivy* and *libavoid* (from the *adaptagrams*
 project), so you must install these Python libraries prior to running
