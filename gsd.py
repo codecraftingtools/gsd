@@ -59,7 +59,7 @@ c = Component(title="C1", ports=[
 ])
 s = Symbol(component=c)
 
-class GcdApp(App):
+class GsdApp(App):
 
     def callback(self, button):
         print("pressed")
@@ -75,4 +75,4 @@ class GcdApp(App):
         return root
 
 if __name__ == '__main__':
-    GcdApp().run()
+    GsdApp().run()
